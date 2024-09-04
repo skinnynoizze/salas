@@ -19,6 +19,11 @@
     font-style: normal;
 }
 
+/* Add this to your CSS file */
+.no-scroll {
+    overflow: hidden;
+}
+
 /* Increase font size for all paragraphs */
 p {
     font-size: 1.1rem; /* Adjust this value as needed */
@@ -468,10 +473,6 @@ footer h3 {
     display: block;
     text-align: left;
     font-size: 0.85rem;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
 }
 
 .dropdown:hover .dropdown-content {
@@ -932,7 +933,9 @@ section {
     margin-bottom: 0.25rem;
 }
 
-/* Responsive adjustments */
+/* Merged and organized media queries from larger to smaller screens */
+
+/* General mobile responsiveness */
 @media (max-width: 1200px) {
     .offers-grid {
         flex-wrap: wrap;
@@ -952,6 +955,7 @@ section {
     }
 }
 
+/* General mobile responsiveness and hero section adjustments */
 @media (max-width: 768px) {
     body {
         padding-top: 120px;
@@ -987,7 +991,6 @@ section {
         justify-content: space-evenly;
     }
     .main-nav li, .main-nav.active li {
-        
         width: 100%;
         text-align: center;
         padding-bottom: 20px;
@@ -1000,17 +1003,13 @@ section {
         padding-top: 20px;
     }
 
-
-    /* Remove hover styles for dropdown */
-.dropdown:hover .dropdown-content {
-    display: none; /* Remove this line */
-}
-
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
 
     .dropdown.active .dropdown-content {
         display: block; /* Show dropdown when active */
     }
-    
     .dropdown-content a {
         padding: 10px 0;
         text-align: center;
@@ -1080,6 +1079,22 @@ section {
     .contact-content {
         flex-direction: column;
     }
+
+    /* Specific adjustments for hero section */
+    #hero {
+        height: calc(100vh - 120px); /* Adjust for fixed header height */
+        background-position: center 20%; /* Adjust vertical position */
+    }
+    #hero h1 {
+        font-size: 3rem;
+    }
+    #hero p {
+        font-size: 1.2rem;
+    }
+    .hero-content {
+        justify-content: flex-end; /* Align content to bottom */
+        padding-bottom: 4rem; /* Add some bottom padding */
+    }
 }
 
 @media (max-width: 480px) {
@@ -1090,42 +1105,16 @@ section {
     .gsap-slide {
         flex: 0 0 200px;
     }
-}
-
-/* Update these media queries for better mobile responsiveness */
-@media (max-width: 768px) {
-    #hero {
-        height: calc(100vh - 120px); /* Adjust for fixed header height */
-        background-position: center 20%; /* Adjust vertical position */
-    }
-
-    #hero h1 {
-        font-size: 3rem;
-    }
-
-    #hero p {
-        font-size: 1.2rem;
-    }
-
-    .hero-content {
-        justify-content: flex-end; /* Align content to bottom */
-        padding-bottom: 4rem; /* Add some bottom padding */
-    }
-}
-
-@media (max-width: 480px) {
+    
     #hero {
         background-position: center 30%; /* Further adjust vertical position for smaller screens */
     }
-
     #hero h1 {
         font-size: 2.5rem;
     }
-
     #hero p {
         font-size: 1rem;
     }
-
     .hero-content {
         padding: 1rem;
         padding-bottom: 3rem; /* Adjust bottom padding for smaller screens */
