@@ -963,6 +963,7 @@ section {
     .menu-toggle {
         display: block;
     }
+
     .main-nav {
         display: none;
         position: fixed;
@@ -986,9 +987,10 @@ section {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        height: 100%;
+        height: 80%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-start;
+        gap: unset;
     }
     .main-nav li, .main-nav.active li {
         width: 100%;
@@ -1013,7 +1015,6 @@ section {
     .dropdown-content a {
         padding: 10px 0;
         text-align: center;
-        font-size: 0.8rem;
     }
     .footer-content, .footer-top {
         flex-direction: column;
