@@ -1,0 +1,1132 @@
+@font-face {
+    font-family: 'Sackers Heavy Roman';
+    src: url('../fonts/SackersHeavyRoman.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sackers Gothic Std';
+    src: url('../fonts/SackersGothicStd-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tramuntana';
+    src: url('../fonts/Tramuntana Text W00 Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Increase font size for all paragraphs */
+p {
+    font-size: 1.1rem; /* Adjust this value as needed */
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tramuntana', 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-weight: 500; /* Adjust this value as needed */
+    text-transform: uppercase;
+    color: #474b33;
+}
+
+a {
+    text-decoration: none;
+    color: #474b33;
+}
+
+/* Header styles */
+header {
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #e1e4dc;
+    height: 120px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    font-family: 'Sackers Heavy Roman', 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #474b33;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+}
+
+.logo-subtitle {
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #474b33;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.nav-and-button {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav .book-now {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #474b33;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+nav .book-now:hover {
+    background-color: #3a3e2a;
+}
+
+/* Adjust the main navigation styles */
+.main-nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #474b33;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+}
+
+.hamburger::before {
+    transform: translateY(-8px);
+}
+
+.hamburger::after {
+    transform: translateY(8px);
+}
+
+/* X icon for close */
+.menu-toggle.active .hamburger {
+    background-color: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+    transform: rotate(45deg);
+}
+
+.menu-toggle.active .hamburger::after {
+    transform: rotate(-45deg);
+}
+
+section {
+    padding: 2rem 0;
+    position: relative;
+    width: 100%;
+    background-color: #e1e4dc;
+}
+
+section p {
+    font-size: 1.4rem;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+#menus h2 {
+    text-align: center;
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+#hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    height: 100%;
+    padding: 2rem;
+}
+
+
+#hero h1 {
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    color: white;
+}
+
+#hero p {
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+}
+
+/* Add these styles for primary and secondary buttons */
+.button-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #474b33;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.button-primary:hover {
+    background-color: #3a3e2a;
+}
+
+.button-secondary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: #474b33;
+    text-decoration: underline;
+    border-radius: 4px;
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.button-secondary:hover {
+    color: #3a3e2a;
+}
+
+
+
+/* Updated Footer styles */
+footer {
+    background-color: #474b33;
+    padding: 20px 20px 40px;
+    color: #fff;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-family: 'Sackers Heavy Roman', 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.footer-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.newsletter, .footer-links, .social-media {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+footer h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.newsletter form {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #c8a97e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+
+.footer-links a {
+    color: #e1e4dc;
+    text-decoration: none;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.legal {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.legal a {
+    color: #e1e4dc;
+    margin-left: 15px;
+}
+
+
+
+/* Contact section styles */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-visual {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#map {
+    width: 100%;
+}
+
+#map iframe {
+    width: 100%;
+}
+
+
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #474b33;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* Welcome section styles */
+#welcome {
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+#welcome .section-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.welcome-image {
+    flex: 0 0 50%;
+    max-width: 600px;
+    order: 1;
+}
+
+.welcome-image img {
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+#welcome h2 {
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+#welcome p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+
+
+/* Dining section styles */
+#dining {
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+#dining .section-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem; /* Increased gap between image and content */
+}
+
+.dining-image {
+    flex: 0 0 50%;
+    max-width: 600px;
+    order: 2; /* Image on the right */
+}
+
+.dining-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center 30%; /* Adjust this value to control vertical cropping */
+    border-radius: 8px;
+}
+
+#dining h2 {
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem; /* Increased margin */
+    text-transform: uppercase;
+}
+
+#dining p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 2rem; /* Increased margin */
+}
+
+/* Add these styles */
+.section-container {
+    max-width: 1800px; /* Adjust this value as needed */
+    margin: 0 auto;
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+/* Update the existing section styles */
+section {
+    padding: 2rem 0; /* Remove horizontal padding */
+    position: relative;
+    width: 100%;
+}
+
+/* Adjust the welcome section styles */
+#welcome .section-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+
+/* You may need to adjust other styles to fit within the new container */
+
+#metrics {
+    background-color: #f0f7f0; /* Light green background */
+    padding: 40px 0;
+}
+
+.metrics-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.metric {
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.metric-number {
+    font-size: 3em;
+    font-weight: bold;
+    color: #2c5e2e; /* Dark green for numbers */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.metric-label {
+    font-size: 1.2em;
+    color: #4a7a4c; /* Medium green for labels */
+}
+
+
+
+
+/* GSAP Slider styles */
+.gsap-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.gsap-slider {
+    display: flex;
+    will-change: transform;
+}
+
+.gsap-slide {
+    flex: 0 0 300px;
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.gsap-slide img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.gsap-slide h3 {
+    background-color: #f5f5f5;
+    color: #474b33;
+    padding: 15px 10px;
+    margin: 0;
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0 0 8px 8px;
+    position: static;
+}
+
+.gsap-prev, .gsap-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.gsap-prev {
+    left: 10px;
+}
+
+.gsap-next {
+    right: 10px;
+}
+
+.gsap-prev:hover, .gsap-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* Dining section styles */
+#dining {
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+#dining .section-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem; /* Increased gap between image and content */
+}
+
+.dining-image {
+    flex: 0 0 50%; /* Increase this value to make the image larger */
+    max-width: 600px; /* Increase the maximum width */
+    order: 2; /* This pushes the image to the right */
+}
+
+.dining-image img {
+    width: 100%;
+    max-height: 500px; /* Set maximum height to 500px */
+    object-fit: cover;
+    object-position: center 30%; /* Adjust this value to control vertical cropping */
+    border-radius: 8px;
+}
+
+#dining h2 {
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+#dining p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+
+
+#offers {
+    background-color: #474b33; /* Same as footer background */
+    color: #fff;
+    padding: 4rem 0;
+}
+
+#offers .section-container {
+    max-width: 1800px; /* Match the max-width of other sections */
+    margin: 0 auto;
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+#offers h2 {
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 2.5rem; /* Match the size used in the dining section */
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.offers-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.4rem; /* Match the size used in the dining section */
+    line-height: 1.6;
+}
+
+.offers-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.offer-item {
+    flex: 1;
+    text-align: center;
+    max-width: 600px; /* Increase max-width to allow for larger images */
+}
+
+.offer-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.offer-item h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.offer-item p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.view-all-offers {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    background-color: #fff;
+    color: #474b33;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-all-offers:hover {
+    background-color: #e1e4dc;
+    color: #3a3e2a;
+}
+
+
+
+/* Add these new styles */
+.tab-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.tab-link {
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.tab-link:hover {
+    color: #474b33;
+}
+
+.tab-link.active {
+    text-decoration: underline;
+    color: #474b33;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.cocktail-ingredients {
+    text-align: left;
+    margin-top: 5px;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Menu section styles */
+
+/* Style for the introductory paragraph in each menu section */
+#beverages > p, #lunch-and-dinner > p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #666;
+    line-height: 1.6;
+}
+
+#menus .hours {
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+#menus h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.menu-section-title {
+    text-align: center;
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #000;
+    text-transform: uppercase;
+    margin-top: 4rem;
+}
+
+
+.cocktail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cocktail-item {
+    text-align: left;
+}
+
+.cocktail-name {
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #000;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.cocktail-price {
+    font-family: 'Sackers Gothic Std', 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #000;
+}
+
+.cocktail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .offers-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .offer-item {
+        flex: 0 1 calc(50% - 1rem);
+    }
+    .dining-image {
+        flex: 0 0 45%;
+    }
+}
+
+@media (max-width: 992px) {
+    .dining-image {
+        flex: 0 0 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .main-nav {
+        display: none;
+        position: fixed;
+        top: 120px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(225, 228, 220, 0.95);
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+        overflow-y: auto;
+    }
+    .main-nav.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-nav ul, .main-nav.active ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .main-nav li, .main-nav.active li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .dropdown-content {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background-color: transparent;
+        padding-top: 20px;
+    }
+
+
+    /* Remove hover styles for dropdown */
+.dropdown:hover .dropdown-content {
+    display: none; /* Remove this line */
+}
+
+
+    .dropdown.active .dropdown-content {
+        display: block; /* Show dropdown when active */
+    }
+    
+    .dropdown-content a {
+        padding: 10px 0;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .footer-content, .footer-top {
+        flex-direction: column;
+    }
+    .newsletter, .footer-links, .social-media {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .footer-links ul {
+        column-count: 1;
+    }
+    .footer-logo {
+        margin-bottom: 10px;
+    }
+    .footer-line {
+        width: 100%;
+    }
+    .nav-and-button {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    #welcome .section-container,
+    #dining .section-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .welcome-image, .dining-image {
+        order: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+    .welcome-image img,
+    .dining-image img {
+        max-height: 400px;
+        width: 100%;
+        border-radius: 0;
+    }
+    .metrics-container {
+        flex-direction: column;
+    }
+    .metric {
+        margin-bottom: 20px;
+    }
+    .gsap-slide {
+        flex: 0 0 250px;
+    }
+    .offers-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .offer-item {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+    .offer-item img {
+        max-height: 350px;
+    }
+    .cocktail-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-image img,
+    .dining-image img {
+        max-height: 300px;
+    }
+    .gsap-slide {
+        flex: 0 0 200px;
+    }
+}
+
+/* Update these media queries for better mobile responsiveness */
+@media (max-width: 768px) {
+    #hero {
+        height: calc(100vh - 120px); /* Adjust for fixed header height */
+        background-position: center 20%; /* Adjust vertical position */
+    }
+
+    #hero h1 {
+        font-size: 3rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero-content {
+        justify-content: flex-end; /* Align content to bottom */
+        padding-bottom: 4rem; /* Add some bottom padding */
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        background-position: center 30%; /* Further adjust vertical position for smaller screens */
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        padding: 1rem;
+        padding-bottom: 3rem; /* Adjust bottom padding for smaller screens */
+    }
+}
